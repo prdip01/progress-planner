@@ -57,7 +57,7 @@ export default function MenuPanel({ isOpen, onClose, history, currentStages = []
           <div className="flex items-center gap-2">
             <CalendarDays className="text-blue-500" />
             <h2 className="text-lg font-bold text-slate-800 dark:text-slate-100">
-              JEE Mains Tracker
+              Monthly Habit Tracker
             </h2>
           </div>
           <button 
