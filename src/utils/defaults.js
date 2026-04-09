@@ -52,27 +52,27 @@ export const JEE_MAINS_TEMPLATE = [
     time: "08:00 AM - 11:00 AM",
     color: "bg-blue-50/50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300",
     tasks: [
-      { id: "jee_p_dpp", title: "Physics DPP", completed: false },
-      { id: "jee_c_dpp", title: "Chemistry DPP", completed: false },
-      { id: "jee_m_dpp", title: "Mathematics DPP", completed: false }
+      { id: "jee_dpp1", title: "DPP 1", completed: false },
+      { id: "jee_dpp2", title: "DPP 2", completed: false }
     ]
   },
   {
     id: 2,
-    title: "Stage 2: Subject 1",
-    time: "11:30 AM - 01:30 PM",
+    title: "Stage 2: Subject 1 & 2",
+    time: "11:30 AM - 02:30 PM",
     color: "bg-emerald-50/50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-300",
     tasks: [
-      { id: "jee_sub_1", title: "Class 1", completed: false }
+      { id: "jee_sub_phy", title: "Physics", completed: false },
+      { id: "jee_sub_chem", title: "Chemistry", completed: false }
     ]
   },
   {
     id: 3,
-    title: "Stage 3: Subject 2",
-    time: "03:00 PM - 05:00 PM",
+    title: "Stage 3: Subject 3",
+    time: "03:30 PM - 05:30 PM",
     color: "bg-purple-50/50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300",
     tasks: [
-      { id: "jee_sub_2", title: "Class 2", completed: false }
+      { id: "jee_sub_math", title: "Math", completed: false }
     ]
   }
 ];

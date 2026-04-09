@@ -57,7 +57,7 @@ export default function MenuPanel({ isOpen, onClose, history, currentStages = []
           <div className="flex items-center gap-2">
             <CalendarDays className="text-blue-500" />
             <h2 className="text-lg font-bold text-slate-800 dark:text-slate-100">
-              Monthly Habit Tracker
+              JEE Mains Tracker
             </h2>
           </div>
           <button 
@@ -74,7 +74,7 @@ export default function MenuPanel({ isOpen, onClose, history, currentStages = []
           {/* Tracker Matrix */}
           <div>
             <div className="flex justify-between items-end mb-4">
-              <h3 className="font-semibold text-slate-700 dark:text-slate-300">Habits / Protocols</h3>
+              <h3 className="font-semibold text-slate-700 dark:text-slate-300">Subjects & DPPS</h3>
               <span className="text-sm font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 px-3 py-1 rounded-full">
                 {currentMonthName}
               </span>
