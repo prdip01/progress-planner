@@ -176,6 +176,7 @@ export default function App() {
         isOpen={isMenuOpen} 
         onClose={() => setIsMenuOpen(false)} 
         history={history}
+        currentStages={stages}
         darkMode={darkMode}
       />
 

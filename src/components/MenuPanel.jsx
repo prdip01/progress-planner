@@ -17,11 +17,14 @@ const STANDARD_HABITS = [
   { id: 'g4', label: '12. Polity' },
 ];
 
-export default function MenuPanel({ isOpen, onClose, history }) {
+export default function MenuPanel({ isOpen, onClose, history, currentStages = [] }) {
   const date = new Date();
   const currentMonthName = date.toLocaleString('default', { month: 'long' });
   const daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
   const daysArray = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+
+  // Dynamically extract all tasks from current stages context to act as tracker rows!
+  const dynamicHabits = currentStages.flatMap(stage => stage.tasks || []);
 
   // Generate chart data based on history object
   const chartData = daysArray.map(day => {
@@ -92,10 +95,10 @@ export default function MenuPanel({ isOpen, onClose, history }) {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
-                  {STANDARD_HABITS.map(habit => (
+                  {dynamicHabits.map((habit, idx) => (
                     <tr key={habit.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50">
                       <td className="px-3 py-2 sticky left-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 font-medium text-slate-700 dark:text-slate-300 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] dark:shadow-none">
-                        {habit.label}
+                        {idx + 1}. {habit.title}
                       </td>
                       {daysArray.map(day => {
                         const key = `${date.getFullYear()}-${date.getMonth() + 1}-${day}`;

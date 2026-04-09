@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Plus, Trash2, Save, GripVertical } from 'lucide-react';
-import { DEFAULT_TEMPLATE, STAGE_COLORS } from '../utils/defaults';
+import { DEFAULT_TEMPLATE, JEE_MAINS_TEMPLATE, STAGE_COLORS } from '../utils/defaults';
 
 export default function RoutineEditor({ isOpen, onClose, onSave }) {
   const [template, setTemplate] = useState(() => {
@@ -91,6 +91,25 @@ export default function RoutineEditor({ isOpen, onClose, onSave }) {
           <button onClick={onClose} className="p-2 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors">
             <X size={20} />
           </button>
+        </div>
+
+        {/* Presets */}
+        <div className="px-5 pt-4 pb-1">
+          <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">Pre-built Templates</div>
+          <div className="flex gap-2 relative">
+            <button 
+              onClick={() => setTemplate(JSON.parse(JSON.stringify(DEFAULT_TEMPLATE)))}
+              className="px-3 py-1.5 text-sm font-medium bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg transition-colors"
+            >
+              Standard Setup
+            </button>
+             <button 
+              onClick={() => setTemplate(JSON.parse(JSON.stringify(JEE_MAINS_TEMPLATE)))}
+              className="px-3 py-1.5 text-sm font-medium bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-900/30 dark:hover:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 rounded-lg transition-colors"
+            >
+              JEE Mains Plan
+            </button>
+          </div>
         </div>
         
         {/* Scrollable Content */}
