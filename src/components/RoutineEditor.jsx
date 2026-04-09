@@ -147,7 +147,7 @@ export default function RoutineEditor({ isOpen, onClose, onSave }) {
               <div className="p-3 bg-white dark:bg-slate-800 space-y-2">
                 {stage.tasks.map((task, tIdx) => (
                   <div key={task.id} className="flex items-center gap-2 group">
-                    <GripVertical size={16} className="text-slate-300 dark:text-slate-600 cursor-grab opacity-50" />
+                    <GripVertical size={16} className="text-slate-300 dark:text-slate-600 cursor-grab opacity-30" />
                     <input 
                       type="text"
                       value={task.title}
@@ -156,7 +156,7 @@ export default function RoutineEditor({ isOpen, onClose, onSave }) {
                     />
                     <button 
                       onClick={() => handleDeleteTask(stage.id, task.id)}
-                      className="p-2 text-slate-400 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-900/30 rounded-lg transition-colors opacity-0 group-hover:opacity-100"
+                      className="p-2 text-red-400 hover:bg-red-50 hover:text-red-600 dark:text-red-400/70 dark:hover:bg-red-900/30 rounded-lg transition-colors shadow-sm bg-red-50/50 dark:bg-red-900/10"
                     >
                       <Trash2 size={16} />
                     </button>
